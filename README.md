@@ -1,2 +1,2 @@
-# KMP_Modeling
+# KMP Modeling
 Modeling of key management protocol
