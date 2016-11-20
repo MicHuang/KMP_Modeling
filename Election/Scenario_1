@@ -1,0 +1,28 @@
+Scenarios 1 :
+
+Three routers, two members(A and B) and one GCKS, GCKS die. That trigger the
+election procedure between A and B.
+
+Alice_Bob:
+
+(Announce their Priority)
+Step 1. A -> B: Pa
+Step 2. B -> A: Pb
+
+(Authenticate the one with highest priority, because the paper did not indicate
+the method for authentication. We are using IKEv2-DSx.)
+(IKE_SA_INIT)
+Step 3. A -> B: SAa1, KEa, Na
+Step 4. B -> A: SAb1, KEb, Nb
+
+(IKE_SA_AUTH)
+Step 5. A -> B: {A, AUTHa, SAa2}K
+   where K = H(Na.Nb.SAa1.g^KEa^KEb) and
+     AUTHa = {SAa1.g^KEa.Na.Nb}inv(Ka)
+Step 6. B -> A: {B, AUTHb, SAb2}K
+   where
+     AUTHb = {SAb1.g^KEb.Na.Nb}inv(Kb)
+
+(EXTENSION)
+Step 7. A -> B: {MA, 0}K
+Step 8. B -> A: {MB, 1}K
