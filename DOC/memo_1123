@@ -1,0 +1,25 @@
+Things I have to model:
+1. Unicast
+2. Multicast with election
+3. The distribution of the keys
+
+Things I have to explain in the paper
+Unicast:
+1. How IKEv2 works
+2. How IKEv2 modeled
+3. What is the difference of my work between IKEv2
+// It is very similar, the exchanges are the same but payloads are different
+// My unicast case is not only suitable for IPSec but also can be used in TCP-AO
+
+Multicast:
+1. How GDOI and G-IKEv2 works
+2. Maybe how GDOI modeled
+3. What is the relationship between "Election Procedure" and "GDOI/G-IKEv2"
+// Can reference G-SAM which is also a group key management protocol
+// Can reference Dr. Li's Paper:
+   > Distribution of the keys
+   > The election part is different, it has a kind of build-in election to elect a Q, and notice all the customers.
+   // it's like the kids notice their parents die, but my election is like brothers notice their strongest brother die and choose another strongest one.
+
+Keep in mind:
+The thesis is like teach the examers a lesson. You can't assume they know everything but teach them everything they need to know.
