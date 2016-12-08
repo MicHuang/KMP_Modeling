@@ -1,0 +1,12 @@
+In the election procedure there are 2 kind of situation I need to explain:
+  1. Green field. Everybody is in the init status, followed by an election.
+  2. The GCKS died somehow, the rest of the member start an election.
+Eventually, the 2 situation above are the same, but I have to discuss about that in my thesis.
+
+
+GSAM exchange has a Q and backup,
+MaRK has election to elect the GCKS, the backup will rely on the election,
+GDOI assume there is already a BOSS and no backup.
+
+
+Be very carefully about the status machine in the interaction of the modeling.
